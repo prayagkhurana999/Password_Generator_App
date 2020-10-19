@@ -1,0 +1,9 @@
+import random
+omit=[":",";","/"]        #char that we dont want in password u can add as many
+
+letter=[chr(i) for i in range(35,125) if chr(i) not in omit]    #it is by list comprehension 
+password=""      
+length=int(input("Enter the length"))
+for i in range(0,length):
+    password=password+random.choice(letter)        #choise-> is a inbuilt class of random
+print(password)    
